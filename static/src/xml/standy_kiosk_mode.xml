@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template xml:space="preserve">
+
+        <t t-extend="HrAttendanceMyMainMenu">
+        <t t-jquery="a.fa-sign-out" t-operation="after">
+            <a class="fa fa-7x fa-clock-o btn-warning o_hr_standby" t-if="checked_in" aria-label="Standby" title="Standby" groups="hr_standby_user_group,hr_stand_admin_group"/>
+        </t>
+             <t t-jquery="a.fa-sign-in" t-operation="replace">
+            <a class="fa fa-7x o_hr_attendance_sign_in_out_icon fa-sign-in btn-secondary hr_standby" t-if="!checked_in" aria-label="Sign in" title="Sign in"/>
+        </t>
+        </t>
+
+</template>
